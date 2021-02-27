@@ -12,8 +12,8 @@
 
 .menu li {
   list-style: none;
-  /* vertical-align: middle; */
 }
+
 .member_photo {
   border-radius: 50%;
 }
@@ -38,10 +38,45 @@
 	align-items: center;
 }
 
+#name {
+  height: 45px;
+  margin: 16px 0px;
+}
+
+#photo {
+  height: 130px;
+  margin: 16px 0px;
+}
+
+.menber_name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+fieldset {
+  border-style: none;
+}
+
+.color {
+  height: 20px;
+  width: 5px;
+  background-color: #E4AE91;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.input_item {
+  display: flex;
+  align-items: center;
+}
+
+
 .send_btn{
   width: 120px;
   height: 30px;
   border-radius: 30px;
+  border: none;
   color: white;
   font-weight: bolder;
   text-decoration: none;
