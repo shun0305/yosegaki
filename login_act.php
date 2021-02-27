@@ -15,6 +15,7 @@ $password = $_POST["password"];
 // データ取得SQL作成&実行
 $sql = 'SELECT * FROM user_list_table WHERE user_name=:user_name AND password=:password';
 
+
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':user_name', $user_name, PDO::PARAM_STR);
 $stmt->bindValue(':password', $password, PDO::PARAM_STR);
