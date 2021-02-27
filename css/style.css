@@ -1,0 +1,50 @@
+.logo {
+  height: 90px;
+}
+
+.menu li {
+  list-style: none;
+  /* vertical-align: middle; */
+}
+.member_photo {
+  border-radius: 50%;
+}
+
+.menu_btn {
+	display: flex;
+}
+
+.menu_btn p {
+	margin-left: 15px;
+}
+
+.menu_btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+}
+
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 99;
+}
+
+.start p {
+	position: fixed;
+	left: 35%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 99;
+	width: 280px;
+}
