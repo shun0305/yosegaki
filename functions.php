@@ -4,7 +4,7 @@ function connect_to_db()
 {
   // DB接続の設定
   // DB名は`gsacf_x00_00`にする
-  $dbn = 'mysql:dbname=gsacf_d07_07;charset=utf8;port=3306;host=localhost';
+  $dbn = 'mysql:dbname=hack_treck_2021;charset=utf8;port=3306;host=localhost';
   $user = 'root';
   $pwd = '';
 
@@ -18,16 +18,16 @@ function connect_to_db()
   }
 }
 
-// ログイン状態のチェック関数
-function check_session_id()
-{
-  if (
-    !isset($_SESSION["session_id"]) ||
-    $_SESSION["session_id"] != session_id()
-  ) {
-    header("Location:todo_login.php");
-  } else {
-    session_regenerate_id(true);
-    $_SESSION["session_id"] = session_id();
-  }
-}
+// // ログイン状態のチェック関数
+// function check_session_id()
+// {
+//   if (
+//     !isset($_SESSION["session_id"]) ||
+//     $_SESSION["session_id"] != session_id()
+//   ) {
+//     header("Location:todo_login.php");
+//   } else {
+//     session_regenerate_id(true);
+//     $_SESSION["session_id"] = session_id();
+//   }
+// }
