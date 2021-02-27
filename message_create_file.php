@@ -4,7 +4,7 @@
 
 session_start();
 include("functions.php");
-check_session_id();
+// check_session_id();
 
 if (
   !isset($_POST['user_name']) || $_POST['user_name'] == '' ||
