@@ -12,7 +12,7 @@
     <fieldset>
       <legend>ログイン画面</legend>
       <div>
-        名前: <input type="text" name="username">
+        名前: <input type="text" name="user_name">
       </div>
       <!-- <div>
         パスワード: <input type="text" name="password">
