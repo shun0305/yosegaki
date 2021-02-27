@@ -88,8 +88,12 @@ include("functions.php");
         </fieldset>
       </form>
     </div>
-
-
+    <div class="print">
+      <div class="output"></div>
+      <div>
+      <button class="print_btn">印　刷</button>
+      </div>
+    </div>
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
