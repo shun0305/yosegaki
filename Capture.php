@@ -36,6 +36,7 @@ if ($status == false) {
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
   <link rel="stylesheet" href="css/captture.css">
+  <link rel="stylesheet" href="css/sakura.css">
   <link rel="icon" href="img/icon.ico">
 </head>
 
@@ -45,19 +46,23 @@ if ($status == false) {
   <div style="background-color : #AAEEDD">
     <h1>JavaScriptで撮るスクリーンショット</h1>
   </div>
-
+  <div class="cherry-blossom-container">
+    <!-- ここにコンテンツを入れる -->
+  </div>
+  <script src="main.js"></script><!-- JS読み込み -->
   <h3>HTMLの範囲（ここが色紙になる id targetにの中に入れること）</h3>
   <div id="target" style=" height: 550px;">
     <!-- この中にHTML要素を入れると
             下のボタンを押したときにここの範囲が印刷されます
             横幅などはタグ内にwidthで設定してみてね -->
+    <h1 id="taro">タロ先生</h1>
     <div class="boxContainer">
 
       <?= $output ?>
 
 
     </div>
-    <h1 id="taro">タロ先生</h1>
+
     <div class="boxContainer">
       <div class="box">
         <p>名前</p>
