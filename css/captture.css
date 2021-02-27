@@ -3,12 +3,10 @@ display: flex;
  justify-content: center;
 }
 
-.box {
-    border:solid 2px #000000;
+.west {
      margin: 0 150px; 
      width: 200px; 
      height: 200px;
-     border-radius: 10%;
 }
 
 #taro {
@@ -16,3 +14,26 @@ display: flex;
         text-align: center;
         font-size: 40px;
 }
+.test{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #ef887e;
+  padding: 2em;
+  line-height: 60px;
+  text-align:center;
+  border-radius: 50%;
+}
+.test:after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 3px;
+  bottom: 3px;
+  border-style: solid;
+  border-color: transparent transparent transparent #ef887e;
+  border-width: 10px 0 10px 17.32px;
+  transform: rotate(45deg);
+}
+

@@ -34,8 +34,7 @@ if (!isset($_FILES['upfile']) && $_FILES['upfile']['error'] != 0) {
   $unique_name = date('YmdHis')  . md5(session_id()) . "." . $extension;
   $filename_to_save = $directory_path . $unique_name;
 
-  // var_dump($temp_path);
-  // exit();
+
 
   if (!is_uploaded_file($temp_path)) {
     exit('Error:画像がありません'); // tmpフォルダにデータがない
@@ -62,6 +61,9 @@ $stmt->bindValue(':user_name', $user_name, PDO::PARAM_STR);
 $stmt->bindValue(':message', $message, PDO::PARAM_STR);
 $stmt->bindValue(':image', $filename_to_save, PDO::PARAM_STR);
 $status = $stmt->execute();
+
+// var_dump($temp_path);
+// exit();
 
 // データ登録処理後
 if ($status == false) {
