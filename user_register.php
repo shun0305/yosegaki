@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <form action="user_register_act.php" method="POST">
+  <form action="user_register_act.php" method="POST" enctype="multipart/form-data">
     <fieldset>
       <legend>ユーザ登録画面</legend>
       <div>
@@ -16,6 +16,9 @@
       </div>
       <div>
         パスワード: <input type="text" name="password">
+      </div>
+      <div>
+        画像: <input type="file" name="upfile" accept="image/*" capture="camera">
       </div>
       <div>
         <button>登録</button>
