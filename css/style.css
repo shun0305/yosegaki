@@ -1,3 +1,7 @@
+header {
+  background-color: antiquewhite;
+}
+
 .logo {
   height: 90px;
 }
@@ -7,7 +11,7 @@
 }
 
 .menu {
-	width: 300px;
+	width: 360px;
 }
 
 .menu li {
@@ -40,17 +44,19 @@
 
 #name {
   height: 45px;
+  width: 24em;
+  text-align: center;
   margin: 16px 0px;
+}
+
+.member_name {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 #photo {
   height: 130px;
   margin: 16px 0px;
-}
-
-.menber_name {
-  font-size: 30px;
-  font-weight: bold;
 }
 
 fieldset {
