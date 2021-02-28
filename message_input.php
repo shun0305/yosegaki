@@ -18,7 +18,7 @@ include("functions.php");
 
 <body>
   <header>
-    <img class="logo" src="img/top_logo.png">
+    <img class="logo" src="img/top_logo.gif">
   </header>
   <div class="start">
     <p><img src="img/top_logo.png"></p>
@@ -69,13 +69,18 @@ include("functions.php");
       <form method="post" action="message_create_file.php" enctype="multipart/form-data">
         <fieldset>
           <div>
-            名前: <input type="text" name="user_name">
-          </div>
-          <div>
-            <input type="file" name="upfile" accept="image/*" capture="camera">
-          </div>
-          <div>
-            メッセージ: <input type="textarea" name="message">
+            <div class="input_item">
+              <p class="color"></p>名前
+            </div>
+            <input class="input_text" type="text" name="user_name" value="" placeholder="ありりん"><br>
+            <div class="input_item">
+              <p class="color"></p>写真
+            </div>
+            <input type="file" name="upfile" accept="image/*" capture="camera"><br>
+            <div class="input_item">
+              <p class="color"></p>メッセージ
+            </div>
+            <textarea name="feacher" rows="4" cols="32" placeholder="例）今までありがとう！"></textarea>
           </div>
           <div>
             <button class="send_btn">送　信</button>
@@ -83,6 +88,12 @@ include("functions.php");
         </fieldset>
       </form>
     </div>
+    <!-- <div class="print">
+      <div class="output"></div>
+      <div>
+      <button class="print_btn">印　刷</button>
+      </div>
+    </div> -->
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -116,19 +127,19 @@ include("functions.php");
       ];
 
       $('#m_1').on('click', function() {
-        $('#name').html(classes[0].name + '　へ　メッセージを送ろう');
+        $('#name').html(`<span class="member_name">${classes[0].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[0].photo_code}" width="120px" height="auto">`)
       });
       $('#m_2').on('click', function() {
-        $('#name').html(classes[1].name + '　へ　メッセージを送ろう');
+        $('#name').html(`<span class="member_name">${classes[1].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[1].photo_code}" width="120px" height="auto">`)
       });
       $('#m_3').on('click', function() {
-        $('#name').html(classes[2].name + '　へ　メッセージを送ろう');
+        $('#name').html(`<span class="member_name">${classes[2].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[2].photo_code}" width="120px" height="auto">`)
       });
       $('#m_4').on('click', function() {
-        $('#name').html(classes[3].name + '　へ　メッセージを送ろう');
+        $('#name').html(`<span class="member_name">${classes[3].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[3].photo_code}" width="120px" height="auto">`)
       });
     })
