@@ -17,8 +17,9 @@ if ($status == false) {
   foreach ($result as $record) {
     $output .= "<div class='west'>";
     $output .= "<div class='test'>";
-    $output .= "<p>{$record["user_name"]}</p>";
     $output .= "<p>{$record["message"]}</p>";
+    $output .= "<p>{$record["user_name"]}</p>";
+    $output .= "<img class='p_photo' src='{$record["image"]}' height=80px>";
     $output .= "</div>";
     $output .= "</div>";
   }
@@ -35,8 +36,8 @@ if ($status == false) {
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
   <link rel="stylesheet" href="css/captture.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/change.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/icon.ico">
   <title>YOSEGAKI</title>
 </head>
@@ -98,8 +99,10 @@ if ($status == false) {
     <div class="container">
       <div class="flip_box">
         <div class="input">
-          <p id="name"></p>
-          <p id="photo"></p>
+          <div class="input_top">
+            <p id="name"></p>
+            <p id="photo"></p>
+          </div>
           <form method="post" action="message_create_file.php" enctype="multipart/form-data">
             <fieldset>
               <div>
@@ -141,7 +144,7 @@ if ($status == false) {
 
               </div>
 
-              <div class="boxContainer">
+              <!-- <div class="boxContainer">
                 <div class="box">
                   <p>名前</p>
                   <P>テキスト</P>
@@ -155,13 +158,13 @@ if ($status == false) {
                   <P>テキスト</P>
                 </div>
               </div>
-            </div>
-            <h3>↓ボタンを押すと上のHTMLを画像に変換したものが表示される</h3>
+            </div> -->
+
+            <!-- <h3>↓ボタンを押すと上のHTMLを画像に変換したものが表示される</h3> -->
 
             <div id='div' style="display:none">
-              <!-- <img src="" id="result" class="test" /> -->
-
-              <canvas id="board" width="1000px" height="10">
+              <img src="" id="result" class="test" />
+              <canvas id="board" width="900px" height="900px">
                 <img src="" id="result" class="test" style="width: 100%;" />
               </canvas>
             </div>
@@ -295,21 +298,28 @@ if ($status == false) {
         $('#name').html(`<span class="member_name">${classes[0].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[0].photo_code}" width="120px" height="auto">`);
         $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[0].id}">`);
+        $('#output').html(`<?= $output_m1 ?>`);
+
       });
       $('#m_2').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[1].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[1].photo_code}" width="120px" height="auto">`);
         $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[1].id}">`);
+        $('#output').html(`<?= $output_m2 ?>`);
+
       });
       $('#m_3').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[2].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[2].photo_code}" width="120px" height="auto">`);
         $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[2].id}">`);
+        $('#output').html(`<?= $output_m3 ?>`);
       });
       $('#m_4').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[3].name}</span>　へメッセージを送ろう`);
         $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[3].photo_code}" width="120px" height="auto">`);
         $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[3].id}">`);
+        $('#output').html(`<?= $output_m4 ?>`);
+
       });
     })
   </script>
