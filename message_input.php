@@ -115,6 +115,8 @@ if ($status == false) {
                   <p class="color"></p>メッセージ
                 </div>
                 <textarea name="message" rows="4" cols="32" placeholder="例）今までありがとう！"></textarea>
+                            <div id="to_user"></div>
+
               </div>
               <div>
                 <button class="send_btn">送　信</button>
@@ -163,6 +165,7 @@ if ($status == false) {
                 <img src="" id="result" class="test" style="width: 100%;" />
               </canvas>
             </div>
+
 
 
 
@@ -267,18 +270,22 @@ if ($status == false) {
 
     $(function() {
       const classes = [{
+          id: 'm_1',
           name: 'タロ先生',
           photo_code: 'img/photo_taro.jpg'
         },
         {
+          id: 'm_2',
           name: 'まっちゃん',
           photo_code: 'img/photo_mat.jpg'
         },
         {
+          id: 'm_3',
           name: 'かのみ',
           photo_code: 'img/photo_kanomi.jpg'
         },
         {
+          id: 'm_4',
           name: 'あずあず',
           photo_code: 'img/photo_azu.jpg'
         },
@@ -286,19 +293,23 @@ if ($status == false) {
 
       $('#m_1').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[0].name}</span>　へメッセージを送ろう`);
-        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[0].photo_code}" width="120px" height="auto">`)
+        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[0].photo_code}" width="120px" height="auto">`);
+        $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[0].id}">`);
       });
       $('#m_2').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[1].name}</span>　へメッセージを送ろう`);
-        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[1].photo_code}" width="120px" height="auto">`)
+        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[1].photo_code}" width="120px" height="auto">`);
+        $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[1].id}">`);
       });
       $('#m_3').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[2].name}</span>　へメッセージを送ろう`);
-        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[2].photo_code}" width="120px" height="auto">`)
+        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[2].photo_code}" width="120px" height="auto">`);
+        $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[2].id}">`);
       });
       $('#m_4').on('click', function() {
         $('#name').html(`<span class="member_name">${classes[3].name}</span>　へメッセージを送ろう`);
-        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[3].photo_code}" width="120px" height="auto">`)
+        $('#photo').html(`<img class="member_photo" id="photo_image" src="${classes[3].photo_code}" width="120px" height="auto">`);
+        $('#to_user').html(`<input type="hidden" name="to_user" value="${classes[3].id}">`);
       });
     })
   </script>

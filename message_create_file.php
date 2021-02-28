@@ -40,7 +40,7 @@ if (!isset($_FILES['upfile']) && $_FILES['upfile']['error'] != 0) {
     exit('Error:画像がありません'); // tmpフォルダにデータがない
   } else { // ↓ここでtmpファイルを移動する
     if (!move_uploaded_file($temp_path, $filename_to_save)) {
-      exit('Error:ードできませんでした'); // 画像の保存に失敗
+      exit('Error:ロードできませんでした'); // 画像の保存に失敗
     } else {
       chmod($filename_to_save, 0644); // 権限の変更
       //$img = '<img src="' . $filename_to_save . '" >'; // imgタグを設定
