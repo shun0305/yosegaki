@@ -43,7 +43,12 @@ header {
 	align-items: center;
 }
 
-
+.input_top {
+  height: 255px;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 #name {
   height: 45px;
@@ -108,13 +113,16 @@ fieldset {
 }
 
 .output {
-  width: 900px;
-  height: 560px;
-  background-color: #E4AE91;
+  width: 650px;
+  height: 600px;
+  background-color: #faf3ef;
+  border-style: solid;
+  border-width: thin;
+  border-color: #2c0166;
   margin: 50px;
 }
 
-.print_btn{
+/* .button {
   width: 120px;
   height: 30px;
   border-radius: 30px;
@@ -129,11 +137,11 @@ fieldset {
   margin: 20px 70px;
 }
 
-.print_btn:hover {
+.button:hover {
   opacity: 0.5;
   cursor: pointer;
   cursor: hand;
-}
+} */
 
 .start {
 	background: #FFF;
