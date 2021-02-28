@@ -46,10 +46,6 @@ if ($status == false) {
   <div style="background-color : #AAEEDD">
     <h1>JavaScriptで撮るスクリーンショット</h1>
   </div>
-  <div class="cherry-blossom-container">
-    <!-- ここにコンテンツを入れる -->
-  </div>
-  <script src="main.js"></script><!-- JS読み込み -->
   <h3>HTMLの範囲（ここが色紙になる id targetにの中に入れること）</h3>
   <div id="target" style=" height: 550px;">
     <!-- この中にHTML要素を入れると
@@ -84,7 +80,7 @@ if ($status == false) {
   <br>
   <h3>↓ボタンを押すと上のHTMLを画像に変換したものが表示される</h3>
 
-  <div id='div'>
+  <div id='div' style="display:none">
     <!-- <img src="" id="result" class="test" /> -->
 
     <canvas id="board" width="1000px" height="10">

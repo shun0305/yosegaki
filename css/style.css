@@ -42,6 +42,8 @@ header {
 	align-items: center;
 }
 
+
+
 #name {
   height: 45px;
   width: 24em;
@@ -105,8 +107,8 @@ fieldset {
 }
 
 .output {
-  width: 360px;
-  height: 360px;
+  width: 900px;
+  height: 560px;
   background-color: #E4AE91;
   margin: 50px;
 }
